@@ -1,0 +1,12 @@
+<%- include('includes/header.ejs') %>
+
+<h1>Signup page</h1>
+<form action="/users/signup" method="POST">
+    <label for="email">email</label>
+    <input type="text" name="email">
+    <label for="password">password</label>
+    <input type="password" name="password">
+    <button type="submit">Submit</button>
+</form>
+
+<%- include('includes/footer.ejs') %>
