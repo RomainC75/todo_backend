@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node dist/bin/www.js",
-    "tsc:old": "tsc ./src/bin/www.ts",
     "tsc": "tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master",
     "postinstall": "npm run tsc",
-    "dev:old": "ts-node-dev — respawn — pretty — transpile-only src/bin/www",
     "dev": "ts-node-dev src/bin/www",
     "start:old": "nodemon ./bin/www",
+    "tsc:old": "tsc ./src/bin/www.ts",
+    "dev:old": "ts-node-dev — respawn — pretty — transpile-only src/bin/www",
     "start:veryold": "node ./bin/www"
   },
   "dependencies": {
