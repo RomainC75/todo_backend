@@ -1,3 +1,5 @@
+import {Types} from "mongoose"
+
 export interface NewTodoInterface {
     todo: string,
     message: string,
@@ -5,7 +7,7 @@ export interface NewTodoInterface {
 
 export interface TodoInterface extends NewTodoInterface{
     _id: string
-    userId: string,
+    userId: Types.ObjectId,
     isDone: boolean,
     createdAt: Date,
     updatedAt: Date

@@ -71,7 +71,11 @@ router.post("/login", async (req, res, next) => {
       SECRETPHRASE,
       { expiresIn: 60 * 60 * 24 }
     );
-    res.status(200).json({token : token})
+    // res.status(200).json({token : token})
+    res.render('displayToken',{
+      title:'Token page ',
+      token
+    })
   } catch (error) {
     next(error);
   }
