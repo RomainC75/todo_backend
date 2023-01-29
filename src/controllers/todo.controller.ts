@@ -1,5 +1,4 @@
 import { TodoInterface } from "../@types/todo.type";
-
 const Todo = require("../models/Todo.model");
 
 exports.postNewTodo = async (req, res, next) => {

@@ -25,9 +25,3 @@ const TodoSchema = new Schema(
 
 module.exports = model('Todo', TodoSchema)
 
-
-        // userId: {
-        //     type: SchemaTypes.ObjectId,
-        //     required: true,
-        //     ref: "User"
-        // },
