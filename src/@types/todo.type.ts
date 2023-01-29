@@ -4,6 +4,9 @@ export interface NewTodoInterface {
 }
 
 export interface TodoInterface extends NewTodoInterface{
+    _id: string
     userId: string,
-    isDone: boolean
+    isDone: boolean,
+    createdAt: Date,
+    updatedAt: Date
 }
