@@ -9,7 +9,7 @@ exports.postNewTodo = async (req, res, next) => {
       ...req.body,
       userId: req.user._id,
     });
-    res.status(400).json(ans);
+    res.status(201).json(ans);
   } catch (error) {
     next(error);
   }
