@@ -6,7 +6,7 @@
     "start": "node dist/bin/www.js",
     "tsc": "tsc",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
-    "postinstall": "npm run tsc",
+    "postinstall": "npm run tsc && cp -r src/views dist",
     "dev": "ts-node-dev src/bin/www",
     "start:old": "nodemon ./bin/www",
     "tsc:old": "tsc ./src/bin/www.ts",
