@@ -17,6 +17,9 @@ const TodoSchema = new Schema(
         isDone:{
             type: Boolean,
             default: false
+        },
+        imageUrl:{
+            type: String
         }
     },{
         timestamps: true
