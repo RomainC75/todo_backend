@@ -1,7 +1,10 @@
 export {}
 var router = require('express').Router()
 const {postNewTodo, getTodos, getTodo, deleteTodo, updateTodo} = require('../controllers/todo.controller')
+const {getAllTodo} = require('../controllers/all.controllers')
 import authentication from '../middlewares/authentication.mid'
+
+router.get('/all', getAllTodo)
 
 router.get('/:todoId',authentication, getTodo)
 

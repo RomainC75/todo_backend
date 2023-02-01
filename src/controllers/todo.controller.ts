@@ -1,6 +1,9 @@
 import { TodoInterface } from "../@types/todo.type";
 const Todo = require("../models/Todo.model");
 
+
+
+
 exports.postNewTodo = async (req, res, next) => {
   console.log("body : ", req.body);
   console.log("MIDDLE : ", req.user);
