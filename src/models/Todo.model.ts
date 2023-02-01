@@ -20,7 +20,8 @@ const TodoSchema = new Schema(
         },
         imageUrl:{
             type: String
-        }
+        },
+        
     },{
         timestamps: true
     }

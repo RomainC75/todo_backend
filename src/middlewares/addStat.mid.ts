@@ -1,5 +1,17 @@
-const addStat = (req,res,next) =>{
-    
-}
+const User = require("../models/User.model");
+const Data = require('../models/Data.model')
 
-module.exports=addStat
+const addStat = async (req, res, next) => {
+  try {
+    const ans = await Data.create({
+        url: req.url,
+        userId: req.user._id,
+        method: req.method
+    })
+    next();
+  } catch (error) {
+    next(error)
+  }
+};
+
+module.exports = addStat;

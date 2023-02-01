@@ -20,8 +20,8 @@ exports.postNewTodo = async (req, res, next) => {
 
 exports.getTodos = async (req, res, next) => {
   try {
-    const foundTodo: TodoInterface = await Todo.find({ userId: req.user._id });
-    console.log(foundTodo);
+    const foundTodo: TodoInterface[] = await Todo.find({ userId: req.user._id });
+    console.log('found Todos : ', foundTodo.length);
     res.status(200).json(foundTodo);
   } catch (error) {
     next(error);

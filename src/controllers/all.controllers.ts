@@ -9,10 +9,7 @@ exports.getAllTodo = async(req,res,next) =>{
         const users:UserInterface[] = await User.find({})
         let ans = await Todo.find({})
         ans = ans.map(todo => {
-            const user = users.find(user=>user._id.toString()===todo.userId.toString())
-            
-            console.log('==>user : ', user) 
-            console.log('===>todo ',Object.keys(todo))   
+            const user = users.find(user=>user._id.toString()===todo.userId.toString()) 
             return {
                 ...todo._doc,
                 userEmail : user ? user.email : 'null'
