@@ -8,6 +8,7 @@ const addStat = async (req, res, next) => {
         userId: req.user._id,
         method: req.method
     })
+    console.log(ans)
     next();
   } catch (error) {
     next(error)
