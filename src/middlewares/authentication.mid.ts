@@ -14,6 +14,7 @@ const authentication = async (req, res, next) => {
   try {
     const token = req.headers.authorization.split(" ")[1]
     const ans = jwt.verify(token, process.env.SECRETPHRASE);
+    console.log('TOKEN : ', ans)
     req.user=ans.data
     next();
   } catch (error) {
